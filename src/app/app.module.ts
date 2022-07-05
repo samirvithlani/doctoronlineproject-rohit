@@ -21,6 +21,10 @@ import {TableModule} from 'primeng/table';
 import { UserService } from './user.service';
 import {ButtonModule} from 'primeng/button';
 import {CalendarModule} from 'primeng/calendar';
+import {DialogService, DynamicDialogModule} from 'primeng/dynamicdialog';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import {CardModule} from 'primeng/card';
+
 
 
 
@@ -36,7 +40,8 @@ import {CalendarModule} from 'primeng/calendar';
     NavbarComponent,
     FooterComponent,
     SearchComponent,
-    LoginComponent
+    LoginComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -47,10 +52,13 @@ import {CalendarModule} from 'primeng/calendar';
     BrowserAnimationsModule,
     TableModule,
     ButtonModule,
-    CalendarModule
+    CalendarModule,
+    DynamicDialogModule,
+    CardModule
 
   ],
-  providers: [MessageService,FilterService],
-  bootstrap: [AppComponent]
+  providers: [MessageService,FilterService,DialogService],
+  bootstrap: [AppComponent],
+  entryComponents:[UserDetailComponent]
 })
 export class AppModule { }

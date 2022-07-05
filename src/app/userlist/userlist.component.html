@@ -44,6 +44,8 @@
                 <a [routerLink]="['updateuser',u.uId]">
                         UPDATE
                 </a>
+                <!-- <button class="btn btn-primary" (click) ="getUserDetail(u.uId)"><i class="pi pi-check"></i></button> -->
+                <p-button (click)="getUserDetail(u.uId)" icon="pi pi-eye" iconPos="left"></p-button>
             </td>
         </tr>
     </ng-template>
